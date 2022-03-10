@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -s -main=intel $CFILE
+gcc -S -m32=intel $CFILE
