@@ -1,5 +1,6 @@
 /*
  * File: 0-putchar.c
+ *
  * Auth: tsega
  */
 #include "main.h"
@@ -18,7 +19,5 @@ int main(void)
 	_putchar('h');
 	_putchar('a');
 	_putchar('r');
-        _putchar(' ');
-	
 	return (0);
 }
