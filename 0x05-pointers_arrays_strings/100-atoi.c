@@ -1,4 +1,4 @@
-#include "main.h"
+#include "main.c"
 
 /**
  * _atoi - convert to a int
