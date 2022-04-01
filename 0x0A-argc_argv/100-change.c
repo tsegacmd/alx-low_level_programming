@@ -5,11 +5,11 @@
 #include <stdbool.h>
 
 /**
- * centsConverter - Helper function that does all the mathematics
+ * centConverter - Helper function that does all the mathematics
  * @i: Passed in variable from main for calculations
- * Return: The number of cents needed minimum for the passed in variable
+ * Return: The number of cent needed minimum for the passed in variable
  */
-int centsConverter(int i)
+int centConverter(int i)
 {
 	int count = 0;
 
@@ -40,16 +40,16 @@ int centsConverter(int i)
 }
 
 /**
- * main - Takes in exactly one argument for minimum cents count
+ * main - Takes in exactly one argument for minimum cent count
  * @argc: Number of command line arguments
  * @argv: Array name
  * Return: 0 if exactly 1 argument is passed into this program, 1 otherwise
  */
 int main(int argc, char *argv[])
 {
-	int i, cents;
+	int i, cent;
 
-	cents = 0;
+	cent = 0;
 
 	if (argc != 2)
 	{
@@ -63,9 +63,9 @@ int main(int argc, char *argv[])
 		printf("0\n");
 	else
 	{
-		cents = centsConverter(i);
+		cent = centConverter(i);
 
-		printf("%d\n", cents);
+		printf("%d\n", cent);
 	}
 
 	return (0);
