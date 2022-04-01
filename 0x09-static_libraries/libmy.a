@@ -1,3 +1,4 @@
+#!/bin/bash
 0-memset.o
 0-strcat.o
 1-isdigit.o
