@@ -1,72 +1,70 @@
-#include <stdio.h>
-#include <stdlib.h>
-
+#include "3-calc.h"
 /**
- * op_add - addition
- * @a: sumnd 1
- * @b: sumnd 2
- * Return: rsult
- */
-
+  *op_add - return the sum of 2 numbers.
+  *@a: integer.
+  *@b: integer.
+  *
+  *Return: sum.
+  */
 int op_add(int a, int b)
 {
 	return (a + b);
 }
 
 /**
- * op_sub - subtraction
- * @a: minuend
- * @b: sustrnd
- * Return: result
- */
-
+  *op_sub - returns difference of 2 numbers
+  *@a:  integer.
+  *@b: integer.
+  *
+  *Return: difference.
+  */
 int op_sub(int a, int b)
 {
 	return (a - b);
 }
 
 /**
- * op_mul - multiplication
- * @a: multp 1
- * @b: multp 2
- * Return: result
- */
-
+  *op_mul - returns product of two numbers.
+  *@a: integer.
+  *@b: integer.
+  *
+  *Return: product.
+  */
 int op_mul(int a, int b)
 {
 	return (a * b);
 }
 
 /**
- * op_div - division
- * @a: divisr
- * @b: dividndo
- * Return: reult
- */
-
+  *op_div - returns the quotient of 2 numbers.
+  *@a: integer.
+  *@b: integer.
+  *
+  *Return: quotient.
+  */
 int op_div(int a, int b)
 {
-	if (b)
+	if (b == 0)
 	{
-		return (a / b);
+		printf("Error\n");
+		exit(100);
 	}
-	printf("Error\n");
-	exit(100);
+	return (a / b);
 }
 
 /**
- * op_mod - modulo
- * @a: vaper 1
- * @b: vaper 2
- * Return: result
- */
-
+  *op_mod - returns the remainder of division.
+  *@a: integer.
+  *@b: integer.
+  *
+  *Return: remainder.
+  */
 int op_mod(int a, int b)
 {
-	if (b)
+	if (b == 0)
 	{
-		return (a % b);
+		printf("Error\n");
+		exit(100);
 	}
-	printf("Error\n");
-	exit(100);
+	return (a % b);
 }
