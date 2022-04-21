@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "lists.h"
 #include "strlen.c"
-#include <4-main.c>
+#include <3-main.c>
 
 list_t *createNewNode(const char *str);
 
