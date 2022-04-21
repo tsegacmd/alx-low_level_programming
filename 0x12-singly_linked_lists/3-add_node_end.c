@@ -1,9 +1,8 @@
-#ifndef LISTS_H
-#define LISTS_H
-#include <main.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
 #include "strlen.c"
+#include <4-main.c>
 
 list_t *createNewNode(const char *str);
 
