@@ -1,27 +1,30 @@
-#ifndef LISTS_H
-#define LISTS_H
 #include <stdlib.h>
 #include <string.h>
+#include "lists.h"
+
 /**
- * struct list_s - singly linked list
- * @str: string - (malloc'ed string)
- * @len: length of the string
- * @next: points to the next node
+ * add_node - adds a new node at the beginning of a linked list
+ * @head: double pointer to the list_t list
+ * @str: new string to add in the node
  *
- * Description: singly linked list node structure
- * for Holberton project
+ * Return: the address of the new element, or NULL if it fails
  */
-typedef struct list_s
+list_t *add_node(list_t **head, const char *str)
 {
-	char *str;
-	unsigned int len;
-	struct list_s *next;
-} list_t;
+	list_t *new;
+	unsigned int len = 0;
 
-size_t print_list(const list_t *h);
-size_t list_len(const list_t *h);
-list_t *add_node(list_t **head, const char *str);
-list_t *add_node_end(list_t **head, const char *str);
-void free_list(list_t *head);
+	while (str[len])
+		len++;
 
-#endif
+	new = malloc(sizeof(list_t));
+	if (!new)
+		return (NULL);
+
+	new->str = strdup(str);
+	new->len = len;
+	new->next = (*head);
+	(*head) = new;
+
+	return (*head);
+}
