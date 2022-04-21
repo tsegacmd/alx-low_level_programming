@@ -1,31 +1,19 @@
 #include <stdlib.h>
-#include <string.h>
-#include "strlen.c"
 #include "lists.h"
 
 /**
- * add_node - Adds a new node at the beginning of list_t list
- * @new_head: Address of node
- * @str: New node to add
- * Return: Address of new element, NULL if it fails
+ * free_list - frees a linked list
+ * @head: list_t list to be freed
  */
-
-list_t *add_node(list_t **head, const char *str)
+void free_list(list_t *head)
 {
-	list_t *new_node_ptr = malloc(sizeof(list_t));
+	list_t *tmp;
 
-	new_head = malloc(sizeof(list_t));
-
-	if (new_head == NULL)
+	while (head)
 	{
-		return (NULL);
-	}
-	else
-	{
-		new_head->str = strdup(str);
-		new_head->len = length;
-		new_head->next = *head;
-		*head = new;
-		return (new_head);
+		tmp = head->next;
+		free(head->str);
+		free(head);
+		head = tmp;
 	}
 }
