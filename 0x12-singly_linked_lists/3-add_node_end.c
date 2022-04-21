@@ -1,4 +1,4 @@
-#include <string.h>
+#include <main.h>
 #include <stdio.h>
 #include "lists.h"
 #include "strlen.c"
@@ -40,7 +40,7 @@ list_t *add_node_end(list_t **head, const char *str)
 }
 
 /**
- * createNewNode - create a new list_t list node
+ * createNewNode - create a new list_t list node 
  * @str: pointer to string to be assigned to the created node's str property
  * Return: pointer to the new node (SUCCESS) OR
  * NULL, if there is insufficent memory available (FAILURE)
